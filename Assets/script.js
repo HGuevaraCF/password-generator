@@ -59,4 +59,19 @@ function writePassword() {
       CaseResult = '';
   }
 
+  // Generates a string of random numbers
+  if(passwordNumeric){
+    numbersResult = generateString(length, numbers);
+  }else{
+    numbersResult = '';
+  }
+
+// Generates a string of random special characters
+  if(passwordCharacters){
+   charactersResult = generateString(length, specialCharacters);
+  }else{
+    charactersResult = '';
+  }
+
+
 }  
