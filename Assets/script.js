@@ -32,4 +32,15 @@ function writePassword() {
     }else{
       var length = lengthInt;
     }
+
+    // This function generates a string of random characters and will be applied to every type of character
+  function generateString(length, variable) {
+    let Result = '';
+    const charactersLength = variable.length;1
+    for ( let i = 0; i < length; i++ ) {
+        Result += variable.charAt(Math.floor(Math.random() * charactersLength));
+    }
+  
+    return Result;
+  }
 }  
