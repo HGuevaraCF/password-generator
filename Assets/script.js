@@ -43,4 +43,20 @@ function writePassword() {
   
     return Result;
   }
+
+  // This switch section decides between prodividg random uppercase, lowercase or both
+  switch(passwordCase){
+    case '1':
+      CaseResult = generateString(length, lowercase);
+      break;
+    case '2':
+      CaseResult = generateString(length, uppercase);
+      break;
+    case '3':
+      CaseResult = generateString(length, upperLower);
+      break;
+    default:
+      CaseResult = '';
+  }
+
 }  
