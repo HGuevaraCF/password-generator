@@ -73,5 +73,16 @@ function writePassword() {
     charactersResult = '';
   }
 
+//Concatenates every type of character string
+result = CaseResult + numbersResult + charactersResult;
 
+// Given that the previous variable is ordered by character type, it is neccesary to split - shuffle - join
+  var shuffledResult = result.split('').sort(function(){return 0.5-Math.random()}).join('');
+
+// Making sure the final password has the required lenght
+  var password = shuffledResult.substring(0, lengthInt);
+
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 }  
